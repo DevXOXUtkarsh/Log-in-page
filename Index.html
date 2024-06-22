@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<style id="webmakerstyle">
+@import url("https://fonts.googleapis.com/css2?family=Jersey+25&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #090909;
+  overflow: hidden;
+}
+h2 {
+  font-family: "Jersey 25", sans-serif;
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 2.3px;
+}
+.container {
+  position: relative;
+  background-color: rgba(9, 9, 9, 0.6);
+  padding: 40px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* login */
+
+.login-container {
+  text-align: center;
+  max-width: 350px;
+}
+
+h2 {
+  color: #f00;
+  margin-bottom: 20px;
+}
+#loginForm {
+  width: 100%;
+}
+input {
+  box-sizing: border-box;
+  min-width: 100%;
+  padding: 12px 8px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background-color: #222;
+  color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 12px 8px;
+  border-radius: 4px;
+  border: none;
+  background-color: #f00;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: #f00;
+  font-size: 13px;
+  /*   margin-top: 10px; */
+}
+
+/* Animation for lava effect */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+ background: linear-gradient(90deg, rgba(179,14,31,1) 0%, rgba(9,189,235,1) 100%);
+  z-index: -1;
+  animation: lava 4s infinite linear;
+  animation-direction:alternate;
+}
+
+@keyframes lava {0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-05%);
+  }
+  100% {
+    transform: translateX(05%);
+  }
+}
+
+/* media */
+@media screen and (min-width: 426px) {
+  body {
+    background-color: #090909;
+    background: url(https://i.pinimg.com/736x/09/1a/eb/091aeb6a5f4310709522345da92260a6.jpg)
+        left top no-repeat,
+      url(https://i.pinimg.com/736x/41/4b/52/414b52fbd47e30e9a7d28a6a79d563b3.jpg)
+        right top no-repeat #000;
+    background-size: contain;
+  }
+  .container {
+    width: 320px;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    overflow: hidden;
+    transition-property: box-shadow;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition: width 1s linear;
+    border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #b30e1f, #09bdeb) 1;
+  }
+  .container:before {
+  filter: blur(10px);
+}
+}
+</style>
+</head>
+<body>
+<!doctype html>
+<html>
+  <head>
+    <title>Add your title</title>
+    <meta name="viewport" content="width=device-width", intial-scale=1.0>
+  </head>
+<body>
+<div class="container">
+        <div class="login-container">
+          <img style="height:120px;"  xmlns="http://www.w3.org/2000/svg" src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Star_Wars_Day_May_The_Fourth.svg"/>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Submit</button>
+                <p id="errorText" class="error"></p>
+            </form>
+        </div>
+    </div>
+  </body>
+         </html>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Get input values
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorText = document.getElementById('errorText');
+
+    // Validate username and password (you can customize this logic)
+  if (username === 'username' && password === 'password') {
+        // Redirect to dashboard or perform other actions on successful login
+        alert('Login successful!');
+        //link after Submitting correct result
+      window.location.href = 'link';
+    } else {
+        // Show error message
+        errorText.textContent = 'Invalid username or password';
+    }
+});
+//# sourceURL=userscript.js
+  //Follow
+  //codeislife53 On
+  //instagram
+</script>
+</body>
+</html>
